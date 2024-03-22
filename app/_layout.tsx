@@ -1,13 +1,16 @@
 import { Stack } from 'expo-router';
 
 export const unstable_settings = {
-  initialRouteName: 'HomeScreen',
+  initialRouteName: 'home',
 };
 
 export default function RootLayoutNav() {
   return (
-    <Stack>
-      <Stack.Screen name="HomeScreen" options={{}} />
+    <Stack initialRouteName="home">
+      <Stack.Screen name="create" options={{}} />
+      <Stack.Screen name="home" options={{ headerShown: false }} />
+      <Stack.Screen name="lobby" options={{}} />
+      <Stack.Screen name="play" options={{}} />
     </Stack>
   );
 }
